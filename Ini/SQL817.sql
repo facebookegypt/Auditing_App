@@ -1,0 +1,12 @@
+
+Admin on 2016-May-08, Sunday
+DROP TABLE [1647LO39EURGBP];
+
+Admin on 2016-May-08, Sunday
+DROP TABLE [2245DA37AEDCHF];
+
+Admin on 2016-May-08, Sunday
+DROP TABLE [24451 37EUREGP];
+
+Admin on 2016-May-08, Sunday
+DROP TABLE [2445LO37EUREGP];

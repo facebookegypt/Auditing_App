@@ -1,0 +1,8 @@
+1) Finish the registration
+Date : date of reg
+UserName : User name
+Password : Pass
+Uname : Name
+Contracts : contracts
+Project : project
+Rank : User / Admin

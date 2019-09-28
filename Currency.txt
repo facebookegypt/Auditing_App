@@ -1,0 +1,21 @@
+
+        '16/Feb/2019
+        'Get all currencies
+        Dim SQLSTR As String = String.Empty
+        ListBox1.Items.Clear()
+        SQLSTR = ("SELECT [Contracts].[Currencies] FROM [Contracts] WHERE [Contracts].[CntrctID] ='" & ArchID.Text & "';")
+        With CMD
+            .Connection = CN
+            .CommandType = CommandType.Text
+            .CommandText = SQLSTR
+        End With
+        Dim DR As OleDbDataReader = CMD.ExecuteReader
+        DR.Read()
+        ConnectBtn.BackColor = Color.Green
+        Dim Tcurr As String = (DR!Currencies)
+        Dim N As Integer = Tcurr.Split(",").Length - 1
+        For I As Integer = 0 To N - 1
+            Dim T() As String = (Tcurr.Split(","))
+            ListBox1.Items.Add(T(I))
+        Next
+        DR.Close()

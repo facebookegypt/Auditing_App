@@ -1,0 +1,34 @@
+- Create a table with a PrimaryKey field with an AutoNumber data type and a field called MyText with a Text data type and a length of 10, type the following statement in the Data Definition Query window, and then run the query.
+	
+	CREATE TABLE Table1 (Id COUNTER CONSTRAINT PrimaryKey PRIMARY KEY, MyText TEXT (10)) 
+
+- After you create both tables, running the following query creates a one- to-many relationship between Table1 and Table2, with Table1 as the primary side of the relationship:
+	
+	ALTER TABLE Table2 ADD CONSTRAINT Relation1 FOREIGN KEY ([Id]) REFERENCES Table1 ([Id])
+
+- Delete the relationship between the tables, run the following query:
+
+	ALTER TABLE Table2 DROP CONSTRAINT Relation1
+
+- Delete Table1, run the following query:
+
+	DROP TABLE Table1
+
+- Delete Table2, run the following query:
+
+	DROP TABLE Table2 
+
+- Alter Column in Table1
+	
+	ALTER TABLE Table1 ALTER COLUMN [DateSend] DATETIME DEFAULT NOW() NOT NULL
+
+- Add new Column [Field]
+
+	ALTER TABLE Table1 ADD COLUMN Notes TEXT(25)
+
+- Alter Column Data Type and Size
+
+	ALTER TABLE Table1 ALTER COLUMN ZipCode TEXT(10)
+
+- Delete a column in a table, use the following syntax (notice that some database systems don't allow deleting a column):
+	ALTER TABLE Table1 DROP COLUMN column_name

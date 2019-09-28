@@ -1,0 +1,400 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9985E897-080E-41C5-99CC-BB33EC8D8939}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Auditing.My.MyApplication</StartupObject>
+    <RootNamespace>Auditing</RootNamespace>
+    <AssemblyName>Auditing</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Auditing.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Auditing.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>GUI\INFO.ICO</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Contracts\Contracts_Mod.vb" />
+    <Compile Include="Contracts\MyContracts.Designer.vb">
+      <DependentUpon>MyContracts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Contracts\MyContracts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contracts\Sections_Created.Designer.vb">
+      <DependentUpon>Sections_Created.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Contracts\Sections_Created.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Database\Dbase.Designer.vb">
+      <DependentUpon>Dbase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Dbase.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Database\DB_Struct.Designer.vb">
+      <DependentUpon>DB_Struct.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Database\DB_Struct.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Emp\BasicInfo.Designer.vb">
+      <DependentUpon>BasicInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Emp\BasicInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Emp\MainEmp.Designer.vb">
+      <DependentUpon>MainEmp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Emp\MainEmp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\About.Designer.vb">
+      <DependentUpon>About.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\About.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contracts\Cntrctrs.Designer.vb">
+      <DependentUpon>Cntrctrs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Contracts\Cntrctrs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contracts\Contracts.Designer.vb">
+      <DependentUpon>Contracts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Contracts\Contracts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BanksForm.Designer.vb">
+      <DependentUpon>BanksForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BanksForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CurrencyFrm.Designer.vb">
+      <DependentUpon>CurrencyFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CurrencyFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dalil.Designer.vb">
+      <DependentUpon>Dalil.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dalil.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contracts\Edit_Contract.Designer.vb">
+      <DependentUpon>Edit_Contract.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Contracts\Edit_Contract.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contracts\New_Contract.Designer.vb">
+      <DependentUpon>New_Contract.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Contracts\New_Contract.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\New_Project.Designer.vb">
+      <DependentUpon>New_Project.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\New_Project.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contracts\SbCntrctr.Designer.vb">
+      <DependentUpon>SbCntrctr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Contracts\SbCntrctr.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Database_Settings.Designer.vb">
+      <DependentUpon>Database_Settings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Database_Settings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Reg.Designer.vb">
+      <DependentUpon>Reg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Reg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Database.vb" />
+    <Compile Include="Modules\Drawings.vb" />
+    <Compile Include="Modules\evry1falls.vb" />
+    <Compile Include="MainFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFrm.Designer.vb">
+      <DependentUpon>MainFrm.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="GUI\Settings.Designer.vb">
+      <DependentUpon>Settings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Settings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sections\ManageSections.Designer.vb">
+      <DependentUpon>ManageSections.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sections\ManageSections.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.vb" />
+    <Compile Include="Users\ManageUsrs.Designer.vb">
+      <DependentUpon>ManageUsrs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ManageUsrs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Contracts\MyContracts.resx">
+      <DependentUpon>MyContracts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contracts\Sections_Created.resx">
+      <DependentUpon>Sections_Created.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Database\Dbase.resx">
+      <DependentUpon>Dbase.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Database\DB_Struct.resx">
+      <DependentUpon>DB_Struct.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emp\BasicInfo.resx">
+      <DependentUpon>BasicInfo.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emp\MainEmp.resx">
+      <DependentUpon>MainEmp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\About.resx">
+      <DependentUpon>About.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contracts\Cntrctrs.resx">
+      <DependentUpon>Cntrctrs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contracts\Contracts.resx">
+      <DependentUpon>Contracts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BanksForm.resx">
+      <DependentUpon>BanksForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CurrencyFrm.resx">
+      <DependentUpon>CurrencyFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dalil.resx">
+      <DependentUpon>Dalil.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contracts\Edit_Contract.resx">
+      <DependentUpon>Edit_Contract.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contracts\New_Contract.resx">
+      <DependentUpon>New_Contract.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\New_Project.resx">
+      <DependentUpon>New_Project.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contracts\SbCntrctr.resx">
+      <DependentUpon>SbCntrctr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Database_Settings.resx">
+      <DependentUpon>Database_Settings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Reg.resx">
+      <DependentUpon>Reg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFrm.resx">
+      <DependentUpon>MainFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Settings.resx">
+      <DependentUpon>Settings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sections\ManageSections.resx">
+      <DependentUpon>ManageSections.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\ManageUsrs.resx">
+      <DependentUpon>ManageUsrs.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ICOS\money.png" />
+    <None Include="Resources\Icon1.ico" />
+    <None Include="bin\Debug\INFO.ICO" />
+    <None Include="bin\Debug\Logo_Aboutform.png" />
+    <None Include="bin\Debug\tool-pro.ico" />
+    <Content Include="Forms\Images\AED.gif" />
+    <Content Include="Forms\Images\AUD.gif" />
+    <Content Include="Forms\Images\BAD.gif" />
+    <Content Include="Forms\Images\CAD.gif" />
+    <Content Include="Forms\Images\CHF.gif" />
+    <Content Include="Forms\Images\DKK.gif" />
+    <Content Include="Forms\Images\EGP.gif" />
+    <Content Include="Forms\Images\EUR.gif" />
+    <Content Include="Forms\Images\GBP.gif" />
+    <Content Include="Forms\Images\JOD.gif" />
+    <Content Include="Forms\Images\JPY.gif" />
+    <Content Include="Forms\Images\KWD.gif" />
+    <Content Include="Forms\Images\NOK.gif" />
+    <Content Include="Forms\Images\OMR.gif" />
+    <Content Include="Forms\Images\QTR.gif" />
+    <Content Include="Forms\Images\SAR.gif" />
+    <Content Include="Forms\Images\SEK.gif" />
+    <Content Include="Forms\Images\USD.gif" />
+    <Content Include="GUI\INFO.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Class\" />
+    <Folder Include="Ini\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
